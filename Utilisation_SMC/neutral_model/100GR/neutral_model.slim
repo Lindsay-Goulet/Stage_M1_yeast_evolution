@@ -1,0 +1,29 @@
+// Author : Louis OLLIVIER ~ louis.ollivier@etu.univ-rouen.fr
+// Université Paris-Saclay
+// Lab : LISN ~ UMR9015 ~ BIOINFO team
+
+initialize() {
+        initializeTreeSeq();
+        initializeMutationRate(0);
+        initializeMutationType("m1", 0.5, "f", 0.0);
+        initializeGenomicElementType("g1", m1, 1.0);
+        initializeGenomicElement(g1, 0, 9999999);
+        initializeRecombinationRate(rho/10);
+}
+
+1 { sim.addSubpop("p1", Ne); } // Real Ne = 1000, but it was not enough for exponential growth so we sample at the end
+
+early() {
+	if (sim.generation % 100 != 0){
+                p1.setCloningRate(1.0);
+        }
+	else {
+              	p1.setCloningRate(0.0);
+        }
+}
+
+
+10000 late() {
+	sim.treeSeqOutput(paste("100GR/neutral_model_",rep,".trees",sep=""));
+ }
+
