@@ -5,7 +5,7 @@
 
 source /shared/ifbstor1/software/miniconda/bin/activate slimLindsay2
 
-## Author : Louis OLLIVIER ~ louis.ollivier@etu.univ-rouen.fr
+## Author : Lindsay GOULET
 ## Université Paris-Saclay
 ## Lab : LISN ~ UMR9015 ~ BIOINFO team
 
