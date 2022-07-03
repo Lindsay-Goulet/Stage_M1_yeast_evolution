@@ -7,6 +7,6 @@
 for rep in {1..100}
 do
 	sbatch k10/neutral_model.sh $rep
-	sbatch k10/neutral_model.sh $rep
+	sbatch k21/neutral_model.sh $rep
 done
 
